@@ -3,13 +3,19 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "业务组件"
 			}
 		},
 		{
 			"path": "pages/mine/index",
 			"style": {
 				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "views/keyboard/index",
+			"style": {
+				"navigationBarTitleText": "金额键盘"
 			}
 		}
 	],
@@ -28,7 +34,7 @@
 		"list": [
 			{
 				"pagePath": "pages/index/index",
-				"text": "首页",
+				"text": "业务组件",
 				"iconPath": "",
 				"selectedIconPath": ""
 			},
@@ -45,7 +51,9 @@
 		"custom": {
 			"^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
 			"^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
-	        "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue"
+	        "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue",
+			// 将components目录下的组件注册为全局组件，无需引入，直接使用
+			"^com-(.*)": "@/components/$1/$1.vue"
 		}
 	}
 }
